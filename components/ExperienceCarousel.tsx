@@ -96,7 +96,7 @@ export default function ExperienceCarousel() {
         <AnimatedSection delay={300} className="mt-12 text-center">
           <a
             href="#"
-            className="inline-block text-charcoal text-sm font-medium tracking-wide hover:text-medium-gray transition-colors"
+            className="inline-block border border-charcoal text-charcoal text-xs font-medium tracking-[0.1em] uppercase px-8 py-3 hover:bg-charcoal hover:text-white transition-colors"
           >
             Esplora tutte le esperienze
           </a>
