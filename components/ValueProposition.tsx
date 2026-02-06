@@ -2,7 +2,7 @@ import AnimatedSection from "./AnimatedSection";
 
 export default function ValueProposition() {
   return (
-    <section className="bg-white section-luxury">
+    <section className="bg-white section-luxury !pb-10 md:!pb-16 lg:!pb-20">
       <div className="max-w-[800px] mx-auto px-6 text-center">
         <AnimatedSection>
           <h2
