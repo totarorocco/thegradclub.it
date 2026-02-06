@@ -98,21 +98,21 @@
 
 /* Luxury section padding */
 .section-luxury {
-  padding-top: 7rem;
-  padding-bottom: 7rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 @media (min-width: 768px) {
   .section-luxury {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 }
 
 @media (min-width: 1024px) {
   .section-luxury {
-    padding-top: 14rem;
-    padding-bottom: 14rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
   }
 }
 
