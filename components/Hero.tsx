@@ -19,9 +19,9 @@ export default function Hero() {
         }}
       />
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/30" />
+      <div className="absolute inset-0 bg-black/50" />
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-black/20" />
       {/* Film Noise Overlay */}
       <div className="film-noise absolute inset-0" />
 
