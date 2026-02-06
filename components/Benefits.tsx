@@ -31,6 +31,15 @@ export default function Benefits() {
   return (
     <section className="bg-white section-luxury">
       <div className="max-w-[1280px] mx-auto px-6">
+        <AnimatedSection className="mb-16">
+          <h2
+            className="text-charcoal font-light"
+            style={{ fontSize: "var(--text-h1)" }}
+          >
+            Perché scegliere <em className="font-display italic">The Grad Club</em>
+          </h2>
+        </AnimatedSection>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
           {benefits.map((benefit, i) => (
             <AnimatedSection key={benefit.title} delay={i * 100}>
