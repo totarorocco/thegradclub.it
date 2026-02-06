@@ -117,7 +117,7 @@ export default function Navbar() {
             <button
               key={link.label}
               onClick={() => handleNavClick(link.href)}
-              className="font-display italic text-charcoal text-3xl hover:text-medium-gray transition-colors cursor-pointer"
+              className="font-display text-charcoal text-3xl hover:text-medium-gray transition-colors cursor-pointer"
             >
               {link.label}
             </button>

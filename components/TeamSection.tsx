@@ -8,18 +8,19 @@ export default function TeamSection() {
           {/* Text Column */}
           <AnimatedSection>
             <span className="text-light-gray text-xs font-medium tracking-[0.15em] uppercase mb-6 block">
-              Il tuo team sul posto
+              Chi c&apos;è dietro
             </span>
             <h2
-              className="text-charcoal font-light mb-6 leading-tight"
+              className="text-charcoal font-medium mb-6 leading-tight"
               style={{ fontSize: "var(--text-h1)" }}
             >
-              Un <em className="font-display italic">concierge dedicato</em> in ogni destinazione
+              Bella gente, <em className="font-display not-italic">preparata e sistemata</em>
             </h2>
             <p className="text-medium-gray text-lg leading-relaxed mb-8">
-              Non sarai mai solo. Per ogni viaggio Grad Club, avrai un travel designer che
-              conosce la destinazione come le sue tasche. Ti consiglia i posti giusti,
-              organizza tutto nei minimi dettagli e ti assiste 24/7 durante il viaggio.
+              Ogni viaggio Grad Club è curato da un team che conosce la destinazione
+              come le sue tasche. Ma soprattutto, selezioniamo i partecipanti: giovani
+              ambiziosi, neolaureati con voglia di fare. Il tuo prossimo socio, il tuo
+              futuro fornitore, o l&apos;amore della tua vita potrebbe essere nel tuo gruppo.
             </p>
             <a
               href="#come-funziona"

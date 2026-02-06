@@ -6,13 +6,13 @@ export default function ValueProposition() {
       <div className="max-w-[800px] mx-auto px-6 text-center">
         <AnimatedSection>
           <h2
-            className="text-charcoal font-light leading-relaxed"
+            className="text-charcoal font-medium leading-relaxed"
             style={{ fontSize: "var(--text-h2)" }}
           >
-            La nostra visione del <em className="font-display italic not-italic">viaggio di laurea</em>?
+            Non vendiamo <em className="font-display not-italic">vacanze</em>.
             <br />
             <span className="text-medium-gray">
-              Esclusivo, <em className="font-display italic not-italic">curato nei dettagli</em>, e pensato per celebrare il tuo traguardo.
+              Creiamo le <em className="font-display not-italic">connessioni</em> che definiranno il primo capitolo della tua vita dopo l&apos;università.
             </span>
           </h2>
           <div className="mt-8 mx-auto w-[40px] h-[1px] bg-border-gray" />

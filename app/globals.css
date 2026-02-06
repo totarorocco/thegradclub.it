@@ -2,7 +2,7 @@
 
 :root {
   /* Primary */
-  --primary-dark: #202020;
+  --primary-dark: #2B3143;
   --medium-gray: #757575;
 
   /* Accent */
@@ -12,7 +12,7 @@
   --light-gray: #AAAAAA;
   --border-gray: #E5E5E5;
   --off-white: #F7F7F7;
-  --charcoal: #1A1A1A;
+  --charcoal: #2B3143;
   --white: #FFFFFF;
 
   /* Typography */
@@ -39,7 +39,7 @@
   --color-off-white: var(--off-white);
   --color-charcoal: var(--charcoal);
   --font-sans: "Helvetica Neue", Helvetica, Arial, -apple-system, sans-serif;
-  --font-display: "Playfair Display", Georgia, serif;
+  --font-display: "Chicle", cursive;
 }
 
 /* Scrollbar hidden for carousels */

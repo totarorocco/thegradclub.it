@@ -6,7 +6,7 @@ const legalLinks = ["Termini e Condizioni", "Privacy Policy", "Cookie Policy"];
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1A1A1A] pt-16 pb-8">
+    <footer className="bg-charcoal pt-16 pb-8">
       <div className="max-w-[1280px] mx-auto px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Column 1 — Brand */}

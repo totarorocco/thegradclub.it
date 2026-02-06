@@ -3,27 +3,27 @@ import AnimatedSection from "./AnimatedSection";
 const benefits = [
   {
     number: "01",
-    title: "Esperienze Curate",
+    title: "Connessioni Reali",
     description:
-      "Ogni viaggio è progettato nei minimi dettagli da chi conosce la destinazione",
+      "Non è solo un viaggio. Nascono amicizie, relazioni e collaborazioni professionali che durano per sempre",
   },
   {
     number: "02",
-    title: "Prenota Senza Pensieri",
+    title: "Persone Selezionate",
     description:
-      "Pagamenti sicuri, assistenza 24/7 e garanzia soddisfatti o rimborsati",
+      "Giovani ambiziosi, neolaureati preparati e con voglia di fare. Bella gente, punto",
   },
   {
     number: "03",
-    title: "Prezzo Trasparente",
+    title: "Zero Pensieri",
     description:
-      "Nessun costo nascosto. Tutto incluso nel prezzo che vedi",
+      "Tutto organizzato nei minimi dettagli: voli, alloggi, esperienze. Tu devi solo goderti il viaggio",
   },
   {
     number: "04",
-    title: "Community Esclusiva",
+    title: "Una Community per la Vita",
     description:
-      "Viaggia con persone come te, colleghi di università e futuri professionisti",
+      "Come i grandi gruppi nascono da amici che viaggiano insieme, il tuo network inizia qui",
   },
 ];
 
@@ -33,10 +33,10 @@ export default function Benefits() {
       <div className="max-w-[1280px] mx-auto px-6">
         <AnimatedSection className="mb-16">
           <h2
-            className="text-charcoal font-light"
+            className="text-charcoal font-medium"
             style={{ fontSize: "var(--text-h1)" }}
           >
-            Perché scegliere <em className="font-display italic">The Grad Club</em>
+            Perché scegliere <em className="font-display not-italic">The Grad Club</em>
           </h2>
         </AnimatedSection>
 
@@ -44,7 +44,7 @@ export default function Benefits() {
           {benefits.map((benefit, i) => (
             <AnimatedSection key={benefit.title} delay={i * 100}>
               <div className="border-t border-border-gray pt-6 pr-8 pb-6">
-                <span className="text-light-gray font-display text-3xl italic block mb-4">
+                <span className="text-light-gray font-display text-3xl block mb-4">
                   {benefit.number}
                 </span>
                 <h3 className="text-charcoal font-medium text-lg mb-3">{benefit.title}</h3>

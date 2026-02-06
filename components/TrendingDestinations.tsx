@@ -1,101 +1,147 @@
+"use client";
+
+import { useState, useRef } from "react";
 import AnimatedSection from "./AnimatedSection";
 
-const mediumCards = [
+const tabData = [
   {
-    tag: "Novità 2025",
-    image: "https://images.unsplash.com/photo-1510097467424-192d713fd8b2?w=600&q=80",
-    title: "Cancún & Riviera Maya",
-    description:
-      "Il nuovo pacchetto all-inclusive con escursione a Tulum e Isla Mujeres",
-    cta: "Scopri di più",
+    label: "I nostri preferiti",
+    destinations: [
+      { name: "Mexico", image: "https://images.unsplash.com/photo-1510097467424-192d713fd8b2?w=800&q=80" },
+      { name: "Repubblica Dominicana", image: "https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=800&q=80" },
+      { name: "Vietnam", image: "https://images.unsplash.com/photo-1528127269322-539801943592?w=800&q=80" },
+      { name: "Indonesia", image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80" },
+      { name: "Grecia", image: "https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a?w=800&q=80" },
+      { name: "Colombia", image: "https://images.unsplash.com/photo-1583531352515-8884af319dc1?w=800&q=80" },
+      { name: "Croazia", image: "https://images.unsplash.com/photo-1580502304784-8985b7eb7260?w=800&q=80" },
+      { name: "Thailandia", image: "https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=800&q=80" },
+    ],
   },
   {
-    tag: "Guida",
-    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d7?w=600&q=80",
-    title: "Ibiza: non solo party",
-    description:
-      "Beach club, tramonti e cala segrete. La guida definitiva per neolaureati.",
-    cta: "Leggi la guida",
+    label: "Viaggi in estate",
+    destinations: [
+      { name: "Grecia", image: "https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a?w=800&q=80" },
+      { name: "Croazia", image: "https://images.unsplash.com/photo-1580502304784-8985b7eb7260?w=800&q=80" },
+      { name: "Ibiza", image: "https://images.unsplash.com/photo-1558642084-fd07fae5282e?w=800&q=80" },
+      { name: "Sardegna", image: "https://images.unsplash.com/photo-1598887142487-3c854d51eabb?w=800&q=80" },
+      { name: "Indonesia", image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80" },
+      { name: "Colombia", image: "https://images.unsplash.com/photo-1583531352515-8884af319dc1?w=800&q=80" },
+      { name: "Zante", image: "https://images.unsplash.com/photo-1530841377377-3ff06c0ca713?w=800&q=80" },
+    ],
   },
   {
-    tag: "Gruppo",
-    image: "https://images.unsplash.com/photo-1504512485720-7d83a16ee930?w=600&q=80",
-    title: "Viaggi di gruppo in Grecia",
-    description:
-      "Come organizzare il viaggio di laurea perfetto per 10+ persone.",
-    cta: "Scopri di più",
+    label: "Viaggi di Pasqua",
+    destinations: [
+      { name: "Mexico", image: "https://images.unsplash.com/photo-1510097467424-192d713fd8b2?w=800&q=80" },
+      { name: "Repubblica Dominicana", image: "https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=800&q=80" },
+      { name: "Colombia", image: "https://images.unsplash.com/photo-1583531352515-8884af319dc1?w=800&q=80" },
+    ],
   },
 ];
 
 export default function TrendingDestinations() {
+  const [activeTab, setActiveTab] = useState(0);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scrollRight = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: 320, behavior: "smooth" });
+    }
+  };
+
+  const currentDestinations = tabData[activeTab].destinations;
+
   return (
     <section id="destinazioni" className="bg-white section-luxury">
       <div className="max-w-[1280px] mx-auto px-6">
-        <AnimatedSection className="mb-12">
+        {/* Header */}
+        <AnimatedSection className="text-center mb-10">
           <h2
-            className="text-charcoal font-light"
+            className="text-charcoal font-medium leading-tight mb-5"
             style={{ fontSize: "var(--text-h1)" }}
           >
-            Le destinazioni del <em className="font-display italic">momento</em>
+            Viaggia oltre i{" "}
+            <em className="font-display not-italic">luoghi comuni</em>
           </h2>
+          <p className="text-medium-gray text-lg max-w-[640px] mx-auto leading-relaxed">
+            Ogni destinazione, un nuovo gruppo di persone ambiziose come te.
+            Scegli dove inizia il tuo prossimo capitolo.
+          </p>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {/* Large Featured Card */}
-          <AnimatedSection>
-            <div className="relative overflow-hidden min-h-[500px] h-full group cursor-pointer">
-              <img
-                src="https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a?w=900&q=80"
-                alt="Mykonos"
-                className="w-full h-full object-cover absolute inset-0 transition-transform duration-700 group-hover:scale-[1.02]"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-8">
-                <span className="text-white/60 text-xs font-medium tracking-[0.15em] uppercase mb-4 block">
-                  La nostra scelta
-                </span>
-                <h3 className="text-white font-light text-3xl md:text-4xl mb-2">Mykonos</h3>
-                <p className="text-white/70 text-base mb-6">
-                  La destinazione più richiesta dell&apos;estate 2025
-                </p>
-                <span className="inline-block text-white text-xs font-medium tracking-[0.15em] uppercase border-b border-white/40 pb-1">
-                  Scopri i pacchetti
-                </span>
-              </div>
-            </div>
-          </AnimatedSection>
+        {/* Tabs */}
+        <AnimatedSection className="flex justify-center gap-3 mb-10">
+          {tabData.map((tab, i) => (
+            <button
+              key={tab.label}
+              onClick={() => {
+                setActiveTab(i);
+                setHoveredIndex(null);
+                if (scrollRef.current) scrollRef.current.scrollLeft = 0;
+              }}
+              className={`px-6 py-2.5 text-sm font-medium tracking-wide transition-all cursor-pointer ${
+                activeTab === i
+                  ? "bg-charcoal text-white"
+                  : "border border-border-gray text-charcoal hover:border-charcoal"
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </AnimatedSection>
 
-          {/* Medium Cards Stack */}
-          <div className="flex flex-col gap-6">
-            {mediumCards.map((card, i) => (
-              <AnimatedSection key={card.title} delay={i * 150}>
-                <div className="group cursor-pointer flex flex-col sm:flex-row overflow-hidden border-b border-border-gray pb-6">
-                  <div className="relative overflow-hidden w-full sm:w-[200px] aspect-[3/2] sm:aspect-auto shrink-0">
+        {/* Carousel */}
+        <AnimatedSection>
+          <div className="relative">
+            <div
+              ref={scrollRef}
+              className="flex gap-4 overflow-x-auto scrollbar-hide pb-2"
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
+              {currentDestinations.map((dest, i) => (
+                <div
+                  key={dest.name}
+                  className="shrink-0 cursor-pointer"
+                  style={{
+                    width: hoveredIndex === i ? "320px" : "200px",
+                    transition: "width 500ms cubic-bezier(0.4, 0, 0.2, 1)",
+                  }}
+                  onMouseEnter={() => setHoveredIndex(i)}
+                >
+                  <div className="h-[380px] rounded-md overflow-hidden">
                     <img
-                      src={card.image}
-                      alt={card.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                      src={dest.image}
+                      alt={dest.name}
+                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-[1.02]"
                       loading="lazy"
                     />
                   </div>
-                  <div className="pt-4 sm:pt-0 sm:pl-6 flex flex-col justify-center">
-                    <span className="text-light-gray text-xs font-medium tracking-[0.15em] uppercase mb-2">
-                      {card.tag}
-                    </span>
-                    <h4 className="text-charcoal font-medium text-base mb-1.5">{card.title}</h4>
-                    <p className="text-medium-gray text-sm mb-3 line-clamp-2">
-                      {card.description}
-                    </p>
-                    <span className="text-charcoal text-sm font-medium tracking-wide">
-                      {card.cta}
-                    </span>
-                  </div>
+                  <h3 className="font-display text-charcoal text-xl mt-3">
+                    {dest.name}
+                  </h3>
                 </div>
-              </AnimatedSection>
-            ))}
+              ))}
+            </div>
+
+            {/* Scroll arrow */}
+            <button
+              onClick={scrollRight}
+              aria-label="Scorri destinazioni"
+              className="hidden md:flex absolute right-0 top-[190px] -translate-y-1/2 translate-x-1/2 w-12 h-12 bg-white border border-border-gray rounded-full items-center justify-center hover:bg-off-white transition-colors z-10 shadow-sm"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                className="w-5 h-5 text-charcoal"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
           </div>
-        </div>
+        </AnimatedSection>
       </div>
     </section>
   );

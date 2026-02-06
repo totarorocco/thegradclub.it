@@ -70,7 +70,7 @@ export default function ReviewsSection() {
         {/* Header — centered title + Trustpilot */}
         <AnimatedSection className="text-center mb-16">
           <h2
-            className="text-charcoal font-display font-bold mb-8"
+            className="text-charcoal font-bold mb-8"
             style={{ fontSize: "var(--text-h1)" }}
           >
             Oltre 2.000 neolaureati si sono{" "}
@@ -95,10 +95,10 @@ export default function ReviewsSection() {
         {/* Subtitle */}
         <AnimatedSection className="mb-8">
           <h3
-            className="text-charcoal font-light border-b border-border-gray pb-4"
+            className="text-charcoal font-medium border-b border-border-gray pb-4"
             style={{ fontSize: "var(--text-h3)" }}
           >
-            I ricordi dei nostri <em className="font-display italic">viaggiatori</em>
+            I ricordi dei nostri <em className="font-display not-italic">viaggiatori</em>
           </h3>
         </AnimatedSection>
 

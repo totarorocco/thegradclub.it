@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { Playfair_Display } from "next/font/google";
+import { Chicle } from "next/font/google";
 import "./globals.css";
 
-const playfair = Playfair_Display({
+const chicle = Chicle({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["400", "700", "900"],
-  style: ["normal", "italic"],
+  weight: "400",
   display: "swap",
 });
 
@@ -51,7 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="it">
-      <body className={`${playfair.variable} font-sans antialiased`}>
+      <body className={`${chicle.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>

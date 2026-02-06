@@ -78,7 +78,7 @@ Use Tailwind classes: `text-charcoal`, `bg-off-white`, `border-border-gray`, etc
 ### Typography
 
 - **Body:** Helvetica Neue / system sans-serif (`font-sans`)
-- **Display:** Playfair Display (`font-display`) — loaded in layout.tsx, applied via CSS variable
+- **Display:** Chicle (`font-display`) — loaded in layout.tsx, applied via CSS variable, used for highlighted words
 - Fluid sizing with `clamp()` via CSS custom properties (`--text-display`, `--text-h1`, etc.)
 
 ### Component Style Rules
@@ -92,7 +92,7 @@ Use Tailwind classes: `text-charcoal`, `bg-off-white`, `border-border-gray`, etc
 
 ### Fonts
 
-Playfair Display is loaded via `next/font/google` in `app/layout.tsx` and exposed as `--font-display` CSS variable.
+Chicle is loaded via `next/font/google` in `app/layout.tsx` and exposed as `--font-display` CSS variable. Used for highlighted/accent words only, not italic.
 
 ## Project Planning (MANDATORY)
 

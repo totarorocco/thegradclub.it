@@ -19,14 +19,14 @@ export default function Newsletter() {
       <div className="max-w-[600px] mx-auto px-6 text-center relative z-10">
         <AnimatedSection>
           <h2
-            className="text-charcoal font-light mb-4"
+            className="text-charcoal font-medium mb-4"
             style={{ fontSize: "var(--text-h1)" }}
           >
-            Non perderti le <em className="font-display italic">offerte esclusive</em>
+            Il primo passo inizia <em className="font-display not-italic">qui</em>
           </h2>
           <p className="text-medium-gray text-lg mb-10 leading-relaxed">
-            Iscriviti alla lista d&apos;attesa e ricevi per primo le promozioni early bird e i
-            posti limitati per le destinazioni più richieste.
+            Entra nella community. Ricevi per primo le date dei prossimi viaggi,
+            i posti limitati e le storie di chi ha già vissuto l&apos;esperienza Grad Club.
           </p>
 
           {submitted ? (
@@ -56,7 +56,7 @@ export default function Newsletter() {
           )}
 
           <p className="text-light-gray text-xs mt-8">
-            Unisciti a 3.000+ studenti. Niente spam, solo offerte che contano.
+            Unisciti a 3.000+ neolaureati. Niente spam, solo cose che contano.
           </p>
         </AnimatedSection>
       </div>
